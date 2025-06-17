@@ -1,66 +1,72 @@
-import { Ionicons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
-import { useEffect, useRef } from 'react';
-import { Animated, StyleSheet, Text, View } from 'react-native';
-
-const fadeAnim = useRef(new Animated.Value(0)).current;
-const scaleAnim = useRef(new Animated.Value(0.5)).current;
-const router = useRouter();
-
-useEffect(() => {
-    Animated.parallel([
-        Animated.timing(fadeAnim, {
-            toValue: 1,
-            duration: 1000,
-            useNativeDriver: true,
-        }),
-        Animated.spring(scaleAnim, {
-            toValue: 1,
-            tension: 10,
-            friction: 2,
-            useNativeDriver: true,
-        })
-    ]).start();
-
-    const timer = setTimeout(() => {
-      router.replace('/auth');
-    }, 2000);
-
-    return() => clearTimeout(timer);
-
-}, []);
+import { Ionicons } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
+import { useEffect, useRef } from "react";
+import { Animated, StyleSheet, View } from "react-native";
 
 export default function SplashScreen() {
-    return (
-        <View style={styles.container}>
-            <Animated.View style={[
-                    styles.iconContainer,{
-                        opacity: fadeAnim,
-                        transform: [{scale: scaleAnim}]
-                    }
-                ]}>
-                <Ionicons name="medical" size={100} color="#FFFFFF"/>
-                <Text style={styles.appName}>Med Remind</Text>
-            </Animated.View>
-        </View>
-    );
+  const router = useRouter();
+  const fadeAnim = useRef(new Animated.Value(0)).current;
+  const scaleAnim = useRef(new Animated.Value(0.5)).current;
+
+  useEffect(() => {
+    Animated.spring(scaleAnim, {
+      toValue: 1,
+      tension: 1,
+      friction: 5,
+      useNativeDriver: true,
+    }).start();
+
+    Animated.timing(fadeAnim, {
+      toValue: 1,
+      duration: 1000,
+      useNativeDriver: true,
+    }).start();
+
+    const timer = setTimeout(() => {
+      router.replace("/auth");
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <View style={styles.container}>
+      <View style={styles.iconContainer}>
+        <Animated.View
+          style={{
+            transform: [{ scale: scaleAnim }],
+          }}
+        >
+          <Ionicons name="heart-half-outline" size={100} color="white" />
+        </Animated.View>
+        <Animated.Text
+          style={[
+            styles.appName,
+            { opacity: fadeAnim },
+          ]}
+        >
+          Lembra Med
+        </Animated.Text>
+      </View>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#4CAF50',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    iconContainer: {
-        alignItems: 'center',
-    },
-    appName: {
-        color: '#FFFFFF',
-        fontSize: 32,
-        fontWeight: 'bold',
-        marginTop: 20,
-        letterSpacing: 1,
-    }
+  container: {
+    flex: 1,
+    backgroundColor: "#077d50",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  iconContainer: {
+    alignItems: "center",
+  },
+  appName: {
+    color: "white",
+    fontSize: 32,
+    fontWeight: "bold",
+    marginTop: 20,
+    letterSpacing: 1,
+  },
 });
