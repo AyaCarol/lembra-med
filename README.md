@@ -1,12 +1,12 @@
 # Lembra Med
 
-_Se cuidar não precisa ser complicado_ 
+_Because taking care of yourself should't be difficult_ 
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/ayacarol/lembra-med)
 ![GitHub top language](https://img.shields.io/github/languages/top/ayacarol/lembra-med)
 ![GitHub language count](https://img.shields.io/github/languages/count/ayacarol/lembra-med)
 
-_Ferramentas utilizadas:_
+_Technologies and tools:_
 
 ![Static Badge](https://img.shields.io/badge/Expo-black?logo=expo)
 ![Static Badge](https://img.shields.io/badge/npm-red?logo=npm)
