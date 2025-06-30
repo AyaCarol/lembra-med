@@ -1,50 +1,48 @@
-# Welcome to your Expo app 👋
+# Lembra Med
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+_Se cuidar não precisa ser complicado_ 
 
-## Get started
+![GitHub last commit](https://img.shields.io/github/last-commit/ayacarol/lembra-med)
+![GitHub top language](https://img.shields.io/github/languages/top/ayacarol/lembra-med)
+![GitHub language count](https://img.shields.io/github/languages/count/ayacarol/lembra-med)
 
-1. Install dependencies
+_Ferramentas utilizadas:_
 
-   ```bash
+![Static Badge](https://img.shields.io/badge/Expo-black?logo=expo)
+![Static Badge](https://img.shields.io/badge/npm-red?logo=npm)
+![Static Badge](https://img.shields.io/badge/Yarn-blue?logo=yarn&logoColor=white)
+![Static Badge](https://img.shields.io/badge/JSON-black?logo=json)
+![Static Badge](https://img.shields.io/badge/JavaScript-yellow?logo=javascript&logoColor=yellow&color=black)
+![Static Badge](https://img.shields.io/badge/React-blue?logo=react&logoColor=black)
+
+## Overview
+Lembra Med is an open-source cross-platform app for medication management. Built with Expo and React Native, aimed at delivering and intuitive and pleasing experience of health tracking across Android and IOS. Its modular architecture and minimal UI enable fast usage, aiming an perfect fit for our target audience: elderly people, people with chronic diseases and people with psychological disorders.
+
+## Getting Started
+### Prerequisites 
+This project requires the following dependencies:
+- *Programing Language:* TypeScript
+- *Package Manager:* Npm, Yarn
+
+### Installation
+Build Lembra Med from the source and install dependencies:
+1. *Clone Repository:*
+   ```
+   git clone https://github.com/AyaCarol/lembra-med
+   ```
+2. Navigate to the project directory:
+   ```
+   cd lembra-med
+   ```
+3. Install dependencies:
+   *Using [npm](https://docs.npmjs.com/):*
+   ```
    npm install
    ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
+   *Using [yarn](https://classic.yarnpkg.com/lang/en/docs/):*
    ```
+   yarn install
+   ```
+   
+   
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
