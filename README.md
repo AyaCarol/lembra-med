@@ -35,6 +35,7 @@ Build Lembra Med from the source and install dependencies:
    cd lembra-med
    ```
 3. Install dependencies:
+   
    *Using [npm](https://docs.npmjs.com/):*
    ```
    npm install
